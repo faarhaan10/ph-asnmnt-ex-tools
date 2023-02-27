@@ -1,0 +1,24 @@
+/*....................
+all buttons are here
+.....................*/
+
+
+//shared buttons
+const reload = '<button id="reload" type="button" class="btn btn-primary text-bold btn-sm mb-2">Reload</button>';
+const cross = '<button id="cross" type="button" class="btn btn-primary text-bold btn-sm mb-2">X</button>';
+
+
+//buttons for meet
+const startAdmit = `<button id="startAdmit" type="button" class="btn btn-outline-light btn-sm mb-2"><span id='btn-text'>🟢</span></button>`;
+
+
+//buttons for github
+const view = '<button type="button" class="btn btn-info text-bold btn-sm mb-2" id="handleView">View</button> '
+
+
+//buttons for instructor portal
+const submitMark = '<button id="submitMark" type="button" class="btn btn-success text-bold btn-sm mb-2" >Submit</button>'
+const focus = '<button id="focus" type="button" class="btn btn-warning text-bold btn-sm mb-2" >Focus</button>'
+const openModal = '<button id="openModal" type="button" class="btn btn-danger text-bold btn-sm mb-2" >Open</button>'
+const closeModal = '<button id="closeModal" type="button" class="btn btn-danger text-bold btn-sm mb-2" >Close</button>'
+const pressE = '<button id="pressE" type="button" class="btn btn-danger text-bold btn-sm mb-2" >]</button>'
