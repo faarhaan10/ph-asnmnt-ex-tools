@@ -22,3 +22,4 @@ const focus = '<button id="focus" type="button" class="btn btn-warning text-bold
 const openModal = '<button id="openModal" type="button" class="btn btn-danger text-bold btn-sm mb-2" >Open</button>'
 const closeModal = '<button id="closeModal" type="button" class="btn btn-danger text-bold btn-sm mb-2" >Close</button>'
 const pressE = '<button id="pressE" type="button" class="btn btn-danger text-bold btn-sm mb-2" >]</button>'
+const assimentAdd = '<button id="addAssignment" type="button" class="btn btn-danger text-bold btn-sm mb-2" >Add</button>'

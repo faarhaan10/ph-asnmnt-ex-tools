@@ -1,5 +1,5 @@
 const iPortal = () => {
-    displayButtons(openModal + pressE + focus + submitMark + reload + closeModal);
+    displayButtons(openModal + pressE + focus + submitMark + assimentAdd+reload + closeModal);
 
 
     const focusButton = getElement(true, 'focus');
@@ -7,6 +7,7 @@ const iPortal = () => {
     const modalClose = getElement(true, 'closeModal');
     const press = getElement(true, 'pressE');
     const submitMarkSecondary = getElement(true, 'submitMark');
+    const addAssignment = getElement(true, 'addAssignment');
 
 
     focusButton.addEventListener('click', function () {
@@ -41,6 +42,16 @@ const iPortal = () => {
     press.addEventListener('click', function () {
         document.dispatchEvent(new KeyboardEvent('keydown', { 'key': ']' }));
     });
+
+    //add assignment
+    addAssignment.addEventListener('click', function () { 
+        const checkbox = getElement(true, 'thead-checkbox');
+        const assignBtn = getElement(false, 'low-op-btn float-right btn btn-outline-primary')[0];
+        checkbox.click();
+        assignBtn.click();
+        const okBtn = getElement(false, 'swal-button swal-button--confirm swal-button--danger')[0];
+okBtn.click();
+    })
 
 
 }
