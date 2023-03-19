@@ -30,3 +30,11 @@ const assimentAdd =
 	'<button id="addAssignment" type="button" class="btn btn-danger text-bold btn-sm mb-2" >Add</button>';
 const fullMark =
 	'<button id="fullMark" type="button" class="btn btn-danger text-bold btn-sm mb-2" >60</button>';
+
+//buttons for live sites
+const scrollTop =
+	'<button id="scrollTop" type="button" class="btn btn-danger text-bold btn-sm mb-2" >Top</button>';
+const scrollBottom =
+	'<button id="scrollBottom" type="button" class="btn btn-danger text-bold btn-sm mb-2" >Bottom</button>';
+const actionBtn =
+	'<button id="actionBtn" type="button" class="btn btn-danger text-bold btn-sm mb-2" >Action</button>';

@@ -19,6 +19,11 @@ const showRoutes = () => {
 		meet();
 	} else if (route.includes("web.programming-hero.com/")) {
 		iPortal();
+	} else if (
+		route.includes(".netlify.app/") ||
+		route.includes(".surge.sh/")
+	) {
+		liveSite();
 	}
 };
 

@@ -1,31 +1,31 @@
 {
-  "name": "Tools",
-  "description": "This extension is made with love and used to help a bit to all of our instructors when they are on the playground - FARHAN ❤️‍🔥",
-  "version": "0.0.1",
-  "permissions": [
-    "activeTab"
-  ],
-  "browser_action": {
-    "default_icon": "PH.png",
-    "default_popup": "index.html"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*.programming-hero.com/*",
-        "*://meet.google.com/*",
-        "*://github.com/*",
-        "*://*.netlify.app/*"
-      ],
-      "js": [
-        "app.js",
-        "display.js",
-        "./js/github.js",
-        "./js/buttons.js",
-        "./js/meet.js",
-        "./js/instructorPortal.js"
-      ]
-    }
-  ],
-  "manifest_version": 2
+	"name": "Tools",
+	"description": "This extension is made with love and used to help a bit to all of our instructors when they are on the playground - FARHAN ❤️‍🔥",
+	"version": "0.0.1",
+	"permissions": ["activeTab"],
+	"browser_action": {
+		"default_icon": "PH.png",
+		"default_popup": "index.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.programming-hero.com/*",
+				"*://meet.google.com/*",
+				"*://github.com/*",
+				"*://*.netlify.app/*",
+				"*://*.surge.sh/*"
+			],
+			"js": [
+				"app.js",
+				"display.js",
+				"./js/github.js",
+				"./js/buttons.js",
+				"./js/meet.js",
+				"./js/liveSite.js",
+				"./js/instructorPortal.js"
+			]
+		}
+	],
+	"manifest_version": 2
 }

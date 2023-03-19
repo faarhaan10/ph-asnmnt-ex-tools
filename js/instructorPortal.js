@@ -20,7 +20,7 @@ const iPortal = () => {
 	focusButton.addEventListener("click", function () {
 		const inputMark = getElement(true, "Mark");
 		const insertBtn = getElement(true, "insertBtn");
-		insertBtn.click();
+		if (insertBtn) insertBtn.click();
 		const suggetMark = document
 			.getElementsByClassName("m-2 w-50 markSuggestions")[0]
 			.innerText.split(" ")[0];
@@ -39,10 +39,11 @@ const iPortal = () => {
 
 	//open 1st assignment
 	modalOpen.addEventListener("click", function () {
-		const open = getElement(
-			false,
-			"btn btn-icon btn-eye-icon btn-primary "
-		);
+		const open = getElement(false, "btn btn-icon btn-eye-icon btn-primary");
+		const ok = getElement(false, "swal-button swal-button--confirm")[0];
+		if (ok) {
+			ok.click();
+		}
 		open[0].click();
 	});
 
