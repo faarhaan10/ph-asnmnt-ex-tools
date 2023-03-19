@@ -1,7 +1,7 @@
-const displayButtons = (items) => {
-	const btnsContainer = document.getElementById("toolsId");
-	btnsContainer.innerHTML = "";
-	div.innerHTML = `
+const displayButtons = items => {
+  const btnsContainer = document.getElementById('toolsId')
+  btnsContainer.innerHTML = ''
+  div.innerHTML = `
 <div
     style=" 
         position: fixed;
@@ -19,18 +19,25 @@ const displayButtons = (items) => {
 ${items + cross}
 </div>
 </div>
-`;
+`
 
-	const reloadBtn = document.getElementById("reload");
-	if (reloadBtn) {
-		reloadBtn.addEventListener("click", function () {
-			window.location.reload();
-		});
-	}
+  const reloadBtn = document.getElementById('reload')
+  if (reloadBtn) {
+    reloadBtn.addEventListener('click', function () {
+      window.location.reload()
+    })
+  }
 
-	const crossBtn = getElement(true, "cross");
-	crossBtn.addEventListener("click", function () {
-		getElement(true, "toolsId").innerHTML = "";
-		localStorage.setItem("tools", JSON.stringify(false));
-	});
-};
+  const closeBtn = document.getElementById('close-tab')
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      window.close()
+    })
+  }
+
+  const crossBtn = getElement(true, 'cross')
+  crossBtn.addEventListener('click', function () {
+    getElement(true, 'toolsId').innerHTML = ''
+    localStorage.setItem('tools', JSON.stringify(false))
+  })
+}
