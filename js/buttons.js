@@ -2,7 +2,7 @@
 all buttons are here
 .....................*/
 
-//shared buttons
+//----------shared buttons----------
 const reload =
   '<button id="reload" type="button" class="btn btn-primary text-bold btn-sm mb-2">Reload</button>'
 const cross =
@@ -10,14 +10,14 @@ const cross =
 const closeTab =
   '<button id="close-tab" type="button" class="btn btn-primary text-bold btn-sm mb-2">Close Tab</button>'
 
-//buttons for meet
+//-------buttons for meet------------
 const startAdmit = `<button id="startAdmit" type="button" class="btn btn-outline-light btn-sm mb-2"><span id='btn-text'>🟢</span></button>`
 
-//buttons for github
+//-------------buttons for github-----------
 const view =
   '<button type="button" class="btn btn-info text-bold btn-sm mb-2" id="handleView">View</button> '
 
-//buttons for instructor portal
+//----------buttons for instructor portal---------
 const submitMark =
   '<button id="submitMark" type="button" class="btn btn-success text-bold btn-sm mb-2" >Submit</button>'
 const focus =
@@ -33,7 +33,7 @@ const assimentAdd =
 const fullMark =
   '<button id="fullMark" type="button" class="btn btn-danger text-bold btn-sm mb-2" >60</button>'
 
-//buttons for live sites
+//-------------buttons for live sites----------------
 const scrollTop =
   '<button id="scrollTop" type="button" class="btn btn-danger text-bold btn-sm mb-2" >Top</button>'
 const scrollBottom =
