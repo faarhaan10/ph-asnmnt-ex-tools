@@ -1,6 +1,13 @@
 const iPortal = () => {
   displayButtons(
-    openModal + pressE + focus + submitMark + assimentAdd + closeModal + reload
+    openModal +
+      pressE +
+      focus +
+      submitMark +
+      assimentAdd +
+      unassign +
+      closeModal +
+      reload
   );
 
   const focusButton = getElement(true, "focus");
@@ -9,6 +16,7 @@ const iPortal = () => {
   const press = getElement(true, "pressE");
   const submitMarkSecondary = getElement(true, "submitMark");
   const addAssignment = getElement(true, "addAssignment");
+  const unAssign = getElement(true, "unassign");
   const fullMarkBtn = getElement(true, "fullMark");
 
   focusButton.addEventListener("click", function () {
@@ -39,7 +47,11 @@ const iPortal = () => {
 
     // get links
     const links = getElement(false, "col-12 col-md-11")[8].children;
-    [...links].map((item) => window.open(item.children[0].href));
+    const all = [...links].map((i) => i?.children[0]?.href);
+    console.log(all);
+    [...links].map(
+      (item) => item?.children[0] && window.open(item?.children[0]?.href)
+    );
   });
 
   //close the Modal window
@@ -76,4 +88,15 @@ const iPortal = () => {
   // 	// press.click();
   // 	focusButton.click();
   // });
+
+  //to unassign an assignment
+  unAssign.addEventListener("click", () => {
+    const open = getElement(false, "btn btn-icon btn-eye-icon btn-primary")[0];
+    open.click();
+    [...document.getElementsByClassName("btn btn-primary")]
+      .find((item) => item.innerText == "Unassigned To me")
+      .click();
+    const ok = getElement(false, "swal-button swal-button--confirm")[0];
+    ok.click();
+  });
 };

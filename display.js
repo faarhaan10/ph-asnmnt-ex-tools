@@ -1,6 +1,6 @@
-const displayButtons = items => {
-  const btnsContainer = document.getElementById('toolsId')
-  btnsContainer.innerHTML = ''
+const displayButtons = (items) => {
+  const btnsContainer = document.getElementById("toolsId");
+  btnsContainer.innerHTML = "";
   div.innerHTML = `
 <div
     style=" 
@@ -15,29 +15,29 @@ const displayButtons = items => {
         align-items: center;
     " 
 >  
-<div class="d-flex  flex-column flex flex-col p-2 rounded bg-blur  border" id='my-btns'>
+<div class="d-flex  flex-column flex flex-col p-2 rounded bg-blur  border" id='my-btns' style='display:flex;flex-direction:column'>
 ${items + cross}
 </div>
 </div>
-`
+`;
 
-  const reloadBtn = document.getElementById('reload')
+  const reloadBtn = document.getElementById("reload");
   if (reloadBtn) {
-    reloadBtn.addEventListener('click', function () {
-      window.location.reload()
-    })
+    reloadBtn.addEventListener("click", function () {
+      window.location.reload();
+    });
   }
 
-  const closeBtn = document.getElementById('close-tab')
+  const closeBtn = document.getElementById("close-tab");
   if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
-      window.close()
-    })
+    closeBtn.addEventListener("click", function () {
+      window.close();
+    });
   }
 
-  const crossBtn = getElement(true, 'cross')
-  crossBtn.addEventListener('click', function () {
-    getElement(true, 'toolsId').innerHTML = ''
-    localStorage.setItem('tools', JSON.stringify(false))
-  })
-}
+  const crossBtn = getElement(true, "cross");
+  crossBtn.addEventListener("click", function () {
+    getElement(true, "toolsId").innerHTML = "";
+    localStorage.setItem("tools", JSON.stringify(false));
+  });
+};
