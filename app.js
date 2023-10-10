@@ -36,8 +36,9 @@ window.onload = () => {
     const headTag = document.getElementsByTagName("head")[0];
     const style = document.createElement("style");
     style.setAttribute("type", "text/css");
-    style.innerText = `#tools-overlay{background-color: rgb(227 211 211 / 75%)!important;} .swal-modal{filter:invert(92%) !important;} .ReactModalPortal div div{filter:invert(94%) !important;}
+    style.innerText = `#tools-overlay{background-color: rgb(227 211 211 / 75%)!important;} .swal-modal{filter:invert(92%) !important;} 
   `;
+    //.ReactModalPortal div div{filter:invert(94%) !important;}
     headTag.appendChild(style);
   }
 
