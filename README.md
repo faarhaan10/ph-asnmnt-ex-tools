@@ -18,10 +18,13 @@ Clone this repo and install it to your browser as an extension.
   git clone https://github.com/faarhaan10/ph-asnmnt-ex-tools.git
 ```
 
-## New Updates
+## New Updates and Features 🎉🎉🎉
+
+- Dark mode is available for Instructor Portal. Its just a simple color toggling and color filter applied. Enjoy if you prefer Our Portal with dark mode.
+
+### Recent-
 
 - Now you can yous arrow keys
-- Press `👨‍👩‍👧‍👦` key to toggle (active/deactive) arrow keys
 
 ### - For Instructor Portal
 

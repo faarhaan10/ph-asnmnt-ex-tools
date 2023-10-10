@@ -3,6 +3,8 @@ const iPortal = () => {
     localStorage.getItem("tools-activeArrowKeys")
   );
 
+  let isDarkMode = JSON.parse(localStorage.getItem("tools-DarkMode"));
+
   displayButtons(
     openModal +
       pressE +
@@ -12,6 +14,7 @@ const iPortal = () => {
       unassign +
       closeModal +
       arrowKey +
+      themeKey +
       reload
   );
 
@@ -24,6 +27,7 @@ const iPortal = () => {
   const addAssignment = getElement(true, "addAssignment");
   const unAssign = getElement(true, "unassign");
   const arrowKeyBtn = getElement(true, "arrowKeys");
+  const themeKeyBtn = getElement(true, "themeKey");
 
   // add mark function
   const addMark = () => {
@@ -52,10 +56,24 @@ const iPortal = () => {
     }
     open[0].click();
 
+    // controll dark mode
+    const modalField = getElement(false, "ReactModalPortal");
+    const modalArea = modalField[1].children[0];
+    if (isDarkMode) {
+      modalArea.style["filter"] = "invert(94%)";
+      modalArea.style["background-color"] = "rgb(227 211 211 / 75%)!important";
+
+      // some optional work to look awesome
+      modalArea.setAttribute("id", "tools-overlay");
+    } else {
+      modalArea.style["filter"] = "invert(0)";
+      modalArea.setAttribute("id");
+    }
+
     // get links
     const links = getElement(false, "col-12 col-md-11")[8].children;
-    const all = [...links].map((i) => i?.children[0]?.href);
-    console.log(all);
+    // const all = [...links].map((i) => i?.children[0]?.href);
+
     press.click();
     [...links].map(
       (item) => item?.children[0] && window.open(item?.children[0]?.href)
@@ -83,6 +101,27 @@ const iPortal = () => {
     }
   };
   changeArrowKey();
+
+  // dark mode controller function
+  const toggleDarkMode = () => {
+    // const body = document.getElementsByTagName("body");
+    const cWrappper = getElement(false, "c-wrapper");
+    if (isDarkMode) {
+      themeKeyBtn.innerText = "🌒";
+      themeKeyBtn.title = "Dark mode on";
+
+      // appling dark mode on the page
+      cWrappper[0].style["filter"] = "invert(94%)";
+      // body[0].children[1].children[0].children[0].children[1].style["filter"] =
+      // ("invert(94%)");
+    } else {
+      themeKeyBtn.innerText = "🌖";
+      themeKeyBtn.title = "Dark mode off";
+
+      cWrappper[0].style["filter"] = "invert(0)";
+    }
+  };
+  toggleDarkMode();
 
   // press focus
   focusButton.addEventListener("click", function () {
@@ -137,17 +176,24 @@ const iPortal = () => {
     ok.click();
   });
 
-  // press to toggle use arrowKeys
+  // press 👨 to toggle use arrowKeys
   arrowKeyBtn.addEventListener("click", () => {
     isActiveArrowKeys = !isActiveArrowKeys;
     localStorage.setItem("tools-activeArrowKeys", isActiveArrowKeys);
     changeArrowKey();
   });
 
+  // press 🌒/🌖 to toggle use arrowKeys
+  themeKeyBtn.addEventListener("click", () => {
+    isDarkMode = !isDarkMode;
+    localStorage.setItem("tools-DarkMode", isDarkMode);
+    toggleDarkMode();
+  });
+
   // press focus and submit button  (< | >)
   document.addEventListener("keydown", function (e) {
     if (!isActiveArrowKeys) return;
-
+    console.log(e.key);
     switch (e.key) {
       case "ArrowLeft":
         addMark();

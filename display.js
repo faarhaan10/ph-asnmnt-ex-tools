@@ -1,5 +1,10 @@
 const displayButtons = (items) => {
   const btnsContainer = document.getElementById("toolsId");
+
+  // show signature based on the route
+  isInstructorPortal = document.location.href.includes(
+    "web.programming-hero.com/"
+  );
   btnsContainer.innerHTML = "";
   div.innerHTML = `
 <div
@@ -16,7 +21,7 @@ const displayButtons = (items) => {
     " 
 >  
 <div class="d-flex  flex-column flex flex-col p-2 rounded bg-blur  border" id='my-btns' style='display:flex;flex-direction:column'>
-${items + cross}
+${items + cross}${isInstructorPortal ? sig : ""}
 </div>
 </div>
 `;

@@ -6,7 +6,7 @@ all buttons are here
 const reload =
   "<button id='reload' type='button' class='btn btn-primary text-bold btn-sm mb-2' title='Reload this page'>Reload</button>";
 const cross =
-  "<button id='cross' type='button' class='btn btn-primary text-bold btn-sm mb-2' title='Close this stack'>X</button>";
+  "<button id='cross' type='button' class='btn btn-primary text-bold btn-sm mb-2' title='Minimize'>❌</button>";
 const closeTab =
   "<button id='close-tab' type='button' class='btn btn-primary text-bold btn-sm mb-2' title='Close current tab'>Close Tab</button>";
 
@@ -35,6 +35,7 @@ const unassign =
 const fullMark =
   "<button id='fullMark' type='button' class='btn btn-danger text-bold btn-sm mb-2' >60</button>";
 const arrowKey = `<button id='arrowKeys' type='button' class='btn  text-bold btn-sm mb-2' ></button>`;
+const themeKey = `<button id='themeKey' type='button' class='btn btn-danger  text-bold btn-sm mb-2' ></button>`;
 
 //-------------buttons for live sites----------------
 const scrollTop =
@@ -43,3 +44,6 @@ const scrollBottom =
   "<button id='scrollBottom' type='button' class='btn btn-danger text-bold btn-sm mb-2' >Bottom</button>";
 const actionBtn =
   "<button id='actionBtn' type='button' class='btn btn-danger text-bold btn-sm mb-2' >Action</button>";
+
+// signature of creator
+const sig = "<span style='font-size:8px;text-align:right;'>FARHAN.</span>";
