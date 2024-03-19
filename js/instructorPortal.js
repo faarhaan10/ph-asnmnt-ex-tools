@@ -74,7 +74,9 @@ const iPortal = () => {
     // update: links are in 9th position now
     const links = getElement(false, "col-12 col-md-11")[9].children;
     // const all = [...links].map((i) => i?.children[0]?.href);
-
+    // console.log("links", links);
+    // console.log("size", links.length);
+    // console.log("sizw++", [...links].length);
     press.click();
     [...links].map(
       (item) => item?.children[0] && window.open(item?.children[0]?.href)

@@ -6,7 +6,7 @@ const github = () => {
       document.getElementsByTagName("relative-time")[0].attributes.title
         .value || "N/A";
     const commitsElmnt = document.getElementsByClassName(
-      "Text-sc-17v1xeu-0 hfRvxg"
+      "Text-sc-17v1xeu-0 UrHoN"
     );
 
     // update: commits location
